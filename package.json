@@ -1,0 +1,29 @@
+{
+  "name": "bruno-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing page — Bruno Herrera · Video & Foto Freelance (Montevideo)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "framer-motion": "^11.15.0",
+    "gsap": "^3.12.5",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0"
+  }
+}
