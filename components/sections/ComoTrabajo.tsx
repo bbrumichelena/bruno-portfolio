@@ -44,8 +44,16 @@ export function ComoTrabajo() {
 
       {/* Outro destacado */}
       <Reveal delay={0.1}>
-        <p className="mt-14 max-w-3xl text-pretty text-xl font-medium leading-relaxed text-ink/90 md:text-2xl">
-          {comoTrabajo.outro}
+        <p className="mt-14 text-pretty font-medium leading-snug text-ink/90">
+          {comoTrabajo.outro.split("*").map((seg, i) =>
+            i % 2 === 1 ? (
+              <span key={i} className="text-shimmer-gold font-serif italic font-normal text-2xl md:text-[1.75rem]">
+                {seg}
+              </span>
+            ) : (
+              <span key={i} className="text-lg md:text-xl">{seg}</span>
+            )
+          )}
         </p>
       </Reveal>
     </Section>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { hero } from "@/lib/content.config";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Brackets } from "@/components/ui/Brackets";
+import { useParallax } from "@/lib/useParallax";
 
 /* Tokeniza el headline respetando el acento entre *asteriscos* y lo revela palabra a palabra. */
 function HeadlineWords({ text }: { text: string }) {
@@ -36,6 +37,8 @@ function HeadlineWords({ text }: { text: string }) {
 }
 
 export function Hero() {
+  const videoRef = useParallax<HTMLVideoElement>(30);
+
   return (
     <section
       id="top"
@@ -45,7 +48,8 @@ export function Hero() {
       <div className="absolute inset-0">
         {hero.video.ready ? (
           <video
-            className="h-full w-full object-cover"
+            ref={videoRef}
+            className="h-[120%] w-full object-cover"
             src={hero.video.src}
             poster={hero.video.poster || undefined}
             autoPlay
@@ -110,7 +114,15 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 1.15 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-ink/75 md:text-lg"
           >
-            {hero.subheadline}
+            {hero.subheadline.split("*").map((seg, i) =>
+              i % 2 === 1 ? (
+                <span key={i} className="font-serif italic font-normal text-gradient-gold">
+                  {seg}
+                </span>
+              ) : (
+                seg
+              )
+            )}
           </motion.p>
 
           <motion.div

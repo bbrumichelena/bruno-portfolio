@@ -6,6 +6,31 @@ import { nav, site } from "@/lib/content.config";
 import { Monogram } from "@/components/ui/Monogram";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
+function RecordingDot() {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => setVisible((v) => !v), 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      aria-hidden="true"
+      className={cn(
+        "pointer-events-none fixed right-5 top-5 z-[60] flex items-center gap-1.5 rounded-sm px-2 py-1 transition-opacity duration-700",
+        "border border-red-600/40 bg-red-600/20",
+        visible ? "opacity-100" : "opacity-0",
+      )}
+    >
+      <span className="h-2 w-2 rounded-full bg-red-500/80" />
+      <span className="text-[10px] font-medium uppercase tracking-widest text-red-400/90">
+        REC
+      </span>
+    </span>
+  );
+}
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,6 +42,8 @@ export function Header() {
   }, []);
 
   return (
+    <>
+    <RecordingDot />
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
@@ -61,5 +88,6 @@ export function Header() {
         </WhatsAppButton>
       </div>
     </header>
+    </>
   );
 }

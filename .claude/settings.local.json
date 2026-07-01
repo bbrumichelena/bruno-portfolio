@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(gh auth *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://github.com/bbrumichelena/bruno-portfolio)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://github.com/bbrumichelena/bruno-portfolio.git)",
+      "Bash(curl -sI https://github.com/bbrumichelena/bruno-portfolio.git)",
+      "Bash(curl -s https://github.com/bbrumichelena/bruno-portfolio)",
+      "Bash(rm -rf .tmp_clone)",
+      "Bash(GIT_SSH_COMMAND=\"ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new\" git clone git@github.com:bbrumichelena/bruno-portfolio.git .tmp_clone)",
+      "Bash(ls ~/.ssh/ 2>&1)",
+      "Bash(ssh-keygen -t ed25519 -C \"c.herrerapalmaresvet@gmail.com\" -f ~/.ssh/id_ed25519 -N \"\")",
+      "Bash(cp \"/Users/bruno/Documents/Bruno/LOGOBM/LOGO CLAUDE.png\" \"/Users/bruno/Documents/Portafolio brunoi/public/logo-bm.png\" && echo \"Copiado OK\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(cp \"/Users/bruno/Downloads/magnific_cinematic-product-video-dark-seamless-studio-backg_seedance_480p_16-9_24fps_63548.mp4\" \"/Users/bruno/Documents/Portafolio brunoi/public/hero-bg.mp4\" && echo \"OK\")",
+      "Bash(git add *)"
+    ]
+  }
+}

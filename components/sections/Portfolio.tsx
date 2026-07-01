@@ -18,6 +18,7 @@ export function Portfolio() {
         eyebrow={portfolio.eyebrow}
         title={portfolio.title}
         intro={portfolio.intro}
+        className="max-w-none"
       />
 
       {/* Tabs / filtros por rubro */}

@@ -1,14 +1,9 @@
 import { cn } from "@/lib/utils";
 
-/**
- * Monograma "BM" — placeholder premium recoloreado a azul + dorado.
- * ⚠ PENDIENTE · reemplazar por el vectorial real de RIVARO recoloreado.
- * Mantiene la firma de brackets dorados y el split oro/acero.
- */
 export function Monogram({ className, size = 40 }: { className?: string; size?: number }) {
   return (
     <span
-      aria-label="Bruno Herrera — monograma BM"
+      aria-label="Bruno Michelena Herrera — monograma BM"
       className={cn(
         "relative inline-flex items-center justify-center rounded-[10px] bg-secondary/70 ring-1 ring-gold/30",
         className,

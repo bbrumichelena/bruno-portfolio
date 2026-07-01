@@ -11,12 +11,14 @@ export function SectionHeading({
   intro,
   align = "left",
   className,
+  introClassName,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   align?: "left" | "center";
   className?: string;
+  introClassName?: string;
 }) {
   return (
     <div
@@ -46,7 +48,7 @@ export function SectionHeading({
       </Reveal>
       {intro && (
         <Reveal delay={0.16}>
-          <p className="mt-5 text-base leading-relaxed text-muted md:text-lg">{intro}</p>
+          <p className={cn("mt-5 text-base leading-relaxed text-muted md:text-lg", introClassName)}>{intro}</p>
         </Reveal>
       )}
     </div>

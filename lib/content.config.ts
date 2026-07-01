@@ -12,8 +12,8 @@
 /* ───────────────────────────── Sitio ───────────────────────────── */
 
 export const site = {
-  name: "Bruno Herrera",
-  role: "Video & Foto Freelance",
+  name: "Bruno Michelena Herrera",
+  role: "Filmmaker, fotógrafo y editor profesional",
   location: "Montevideo, Uruguay",
   // ⚠ PENDIENTE · actualizar al dominio/subdominio final tras el deploy
   url: "https://bruno-herrera.vercel.app",
@@ -53,18 +53,18 @@ export const nav = {
 /* ────────────────────────────── Hero ────────────────────────────── */
 
 export const hero = {
-  eyebrow: "Video & Foto · Montevideo",
+  eyebrow: "Video & Foto",
   // El acento itálico serif se aplica a las palabras entre *asteriscos*
   headline: "Contenido de video para tu negocio, *listo para publicar.*",
   subheadline:
-    "Grabo reels e historias para Instagram una vez al mes. Vos seguís con tu negocio, yo me encargo del contenido.",
+    "Te grabo y edito el contenido del mes para tu negocio de manera *PROFESIONAL*. Vos seguís con tu negocio, yo me encargo del contenido.",
   cta: { label: "Escribime por WhatsApp", message: whatsapp.defaultMessage },
   // ⚠ PENDIENTE · video corto en loop (5–10s) con montaje de distintos trabajos
   video: {
-    ready: false,
-    src: "", // ej: "/media/hero-reel.mp4"
-    poster: "", // ej: "/media/hero-poster.jpg"
-    alt: "Montaje de trabajos audiovisuales de Bruno Herrera",
+    ready: true,
+    src: "/hero-bg.mp4",
+    poster: "",
+    alt: "Fondo cinematográfico de estudio",
   },
 } as const;
 
@@ -72,22 +72,22 @@ export const hero = {
 
 export const comoFunciona = {
   eyebrow: "Así funciona",
-  title: "Tres pasos, una vez al mes.",
+  title: "Tres pasos, así de simple.",
   steps: [
     {
       n: "01",
-      title: "Coordinamos un día al mes",
-      text: "Elegís el momento que mejor te quede. Yo me adapto a tu agenda.",
+      title: "Coordinamos el momento",
+      text: "Elegís el día, hora y lugar que mejor te queden. Yo me adapto a tu agenda.",
     },
     {
       n: "02",
-      title: "Grabo en tu local",
-      text: "3 a 4 horas grabando contenido real de tu negocio: productos, proceso, equipo, clientes.",
+      title: "Grabo donde lo necesites",
+      text: "Productos, procesos, clientes satisfechos, antes y después, reels informativos, de entretenimiento... Grabamos lo que tu negocio necesita mostrar. El contenido sirve tanto para tus redes como para tus anuncios. Me adapto a lo que necesitás.",
     },
     {
       n: "03",
       title: "Te entrego el contenido",
-      text: "Editado y listo para subir a Instagram, en 48 a 72 horas.",
+      text: "Editado y listo para publicar lo antes posible, para que lo uses rápido. ¿Preferís editarlo vos? También entrego los videos con corrección de color y recorte básico para que los trabajes como vos quieras.",
     },
   ],
 } as const;
@@ -114,15 +114,13 @@ export const portfolio = {
   eyebrow: "Trabajos",
   title: "Trabajo con distintos tipos de negocios.",
   intro:
-    "Grabé contenido para rubros como gastronomía, belleza, salud animal y moda. Si tu rubro no está en la lista, también podemos hablar: la cámara se adapta, las ganas de hacer buen contenido son las mismas.",
-  // ⚠ PENDIENTE · Bruno selecciona qué mostrar de cada rubro y sube el material.
-  // Estructura abierta: sumar rubros (autos, inmobiliario, eventos) es agregar un objeto acá.
+    "Grabé y fotografié contenido para rubros como gastronomía, belleza, veterinaria, automotriz, moda y muchos más. Si tu rubro no está en mi lista, podemos hablar y con gusto me adapto para que logremos el mejor contenido profesional. Cuento con el equipo profesional para lograrlo.",
   rubros: [
     {
       id: "gastronomia",
       label: "Gastronomía",
       blurb: "Producto, proceso y cocina con textura de cine.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para frigorífico y gastronomía" },
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para gastronomía" },
     },
     {
       id: "cosmetologia",
@@ -141,6 +139,54 @@ export const portfolio = {
       label: "Moda / Marca personal",
       blurb: "Identidad y ritmo para que la marca se sienta.",
       media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para moda y marca personal" },
+    },
+    {
+      id: "agencia-ia",
+      label: "Agencia de IA",
+      blurb: "Innovación y tecnología con imagen de futuro.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para agencia de IA" },
+    },
+    {
+      id: "automotriz",
+      label: "Automotriz",
+      blurb: "Movimiento, detalle y potencia en cada plano.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para automotriz" },
+    },
+    {
+      id: "deporte",
+      label: "Boxeo / Deporte",
+      blurb: "Intensidad y acción con ritmo cinematográfico.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para boxeo y deporte" },
+    },
+    {
+      id: "inmobiliario",
+      label: "Inmobiliario",
+      blurb: "Espacios que se venden antes de la visita.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para inmobiliario" },
+    },
+    {
+      id: "alimentacion",
+      label: "Alimentación / Carnicería",
+      blurb: "Frescura, producto y confianza en cada toma.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para alimentación y carnicería" },
+    },
+    {
+      id: "eventos",
+      label: "Eventos empresariales",
+      blurb: "El momento capturado con presencia profesional.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para eventos empresariales" },
+    },
+    {
+      id: "documental",
+      label: "Documental / Reportaje",
+      blurb: "Historias reales contadas con mirada de autor.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Documental y reportaje" },
+    },
+    {
+      id: "mas",
+      label: "Muchos más",
+      blurb: "Si tu rubro no está acá, hablemos igual.",
+      media: { ready: false, type: "video", src: "", poster: "", alt: "Otros rubros" },
     },
   ] as Rubro[],
 };
@@ -185,24 +231,28 @@ export const comoTrabajo = {
     "Trabajo con el mismo nivel de equipo que se usa en producciones de cine y publicidad, adaptado para que tu negocio tenga contenido profesional. No un video casero.",
   gear: [
     {
-      title: "Cámara de cine full frame",
-      text: "El mismo tipo de sensor que usan los profesionales para esa imagen nítida y con profundidad que se ve en las producciones grandes.",
+      title: "Cámara profesional Sony de cine",
+      text: "Cámara Sony Alpha 7V — un equipo profesional para lograr una imagen única, nítida y con esa profundidad que se ve en las producciones más grandes.",
     },
     {
       title: "Estabilizador gimbal profesional",
-      text: "Los movimientos de cámara fluidos y cinematográficos de la publicidad, sin que la imagen tiemble.",
+      text: "Para obtener movimientos de cámara fluidos y cinematográficos que elevan el resultado final.",
     },
     {
-      title: "Audio inalámbrico con cancelación de ruido",
-      text: "Un video con audio sucio se nota enseguida. Uno con audio limpio se siente confiable.",
+      title: "Audio profesional de alta calidad · Hollyland Lark M2",
+      text: "El audio malo arruina hasta el mejor video. Con micrófonos profesionales, cada palabra y sonido se escucha con una calidad que transmite seriedad y confianza desde el primer segundo.",
     },
     {
-      title: "Edición profesional · Premiere y Lightroom",
-      text: "Color, ritmo y montaje pensados para que el contenido se vea cuidado, no improvisado.",
+      title: "Iluminación profesional",
+      text: "Creamos un entorno de luz pensado para que lo que grabamos se vea exactamente como tiene que verse. Cada detalle iluminado, cada toma bajo control.",
+    },
+    {
+      title: "Edición profesional · Adobe Premiere y Lightroom",
+      text: "Color, ritmo y montaje pensado en su totalidad para que el contenido se vea cuidado, especial y con identidad propia.",
     },
   ],
   outro:
-    "Vos no te ocupás de nada de la parte técnica. Yo llevo el equipo, lo armo, grabo y te entrego el resultado.",
+    "Vos no te ocupás de nada de la parte técnica. *Yo llevo el equipo, lo armo, grabo y te entrego el resultado.*",
   // ⚠ PENDIENTE · clips del detrás de cámara — Bruno grabando, el equipo, la edición
   media: { ready: false, type: "video" as const, src: "", poster: "", alt: "Detrás de cámara de Bruno trabajando" },
 } as const;
@@ -224,19 +274,20 @@ export const propuesta = {
 
 export const sobreBruno = {
   eyebrow: "Sobre mí",
+  name: "Bruno Michelena",
   title: "Quién está detrás de la cámara.",
   paragraphs: [
-    "Soy fotógrafo y editor de video profesional. Me formé en la Escuela Uruguaya de Fotografía y Video (EUF), donde hice el curso de fotografía profesional y el de audiovisual, hace más de 4 años, con profesionales del rubro de eventos, bodas y producción audiovisual en Uruguay.",
-    "Trabajé en eventos empresariales, con creadores de contenido, en cosmetología, veterinaria, gastronomía, y también con una agencia que produce video para redes con IA. Hoy estoy enfocado en ayudar a negocios locales a tener presencia constante en redes, sin que tengan que ocuparse de la parte audiovisual.",
-    "Soy perfeccionista con lo que hago: me adapto a cualquier rubro, trabajo cerca y personalizado con cada cliente, y no entrego nada que no me convenza a mí primero.",
+    "Soy fotógrafo, filmmaker y editor de video profesional. Me formé en la Escuela Uruguaya de Fotografía y Video (EUF), donde hice la carrera de fotografía profesional y el curso de audiovisual, donde estudié 3 años con profesionales de varios rubros. Películas de Netflix, eventos, bodas, deportes en la televisión y producciones audiovisuales en general.",
+    "Tuve la oportunidad de trabajar en eventos empresariales, con creadores de contenido, en cosmetología, veterinaria, gastronomía, inmobiliarias, moda y muchos más. Hoy estoy enfocado en ayudar a negocios a tener una presencia constante y profesional en redes, sin que tengan que ocuparse de la parte audiovisual, y que puedan diferenciarse con contenido diferente y calidad de cine.",
+    "Soy perfeccionista con lo que hago, me adapto a cualquier rubro, trabajo cerca y personalizado con cada cliente, y no entrego nada que no me convenza a mí primero.",
   ],
   highlights: [
-    { icon: "grad", label: "+4 años de formación en la EUF" },
-    { icon: "handshake", label: "Trato cercano y personalizado" },
-    { icon: "film", label: "Calidad cinematográfica en cada entrega" },
+    { icon: "grad", label: "+3 años de formación en la EUF", href: "/diploma-euf.jpg" },
+    { icon: "handshake", label: "Trato cercano y personalizado", href: "/foto-cliente.jpg" },
+    { icon: "film", label: "Calidad cinematográfica en cada entrega", href: "/foto-camara.jpg" },
   ],
   // ⚠ PENDIENTE · foto de Bruno con el equipo o grabando
-  photo: { ready: false, src: "", alt: "Bruno Herrera grabando con su equipo" },
+  photo: { ready: false, src: "", alt: "Bruno Michelena grabando con su equipo" },
 } as const;
 
 /* ──────────────────────────── Credenciales ───────────────────────── */
