@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import { sobreBruno } from "@/lib/content.config";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -28,9 +32,46 @@ function HighlightIcon({ name }: { name: string }) {
   );
 }
 
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-void/90 p-4 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="relative max-h-[90vh] max-w-3xl w-full overflow-hidden rounded-2xl shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={1200}
+          height={900}
+          className="h-auto w-full object-contain"
+          priority
+        />
+        <button
+          onClick={onClose}
+          className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-void/70 text-white/80 transition-colors hover:bg-void hover:text-white"
+          aria-label="Cerrar"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function SobreBruno() {
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const lightboxAlt = "+3 años de formación en la EUF";
+
   return (
     <Section id="sobre-bruno" bg="primary">
+      {lightboxSrc && (
+        <Lightbox src={lightboxSrc} alt={lightboxAlt} onClose={() => setLightboxSrc(null)} />
+      )}
+
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,400px)_1fr] lg:gap-16">
         {/* Foto */}
         <Reveal>
@@ -62,14 +103,18 @@ export function SobreBruno() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             {sobreBruno.highlights.map((h, i) => {
-              const chipClass = "flex items-center gap-2.5 rounded-full border border-line/70 bg-secondary/50 px-4 py-2 text-steel-soft transition-colors duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold";
+              const chipClass =
+                "flex items-center gap-2.5 rounded-full border border-line/70 bg-secondary/50 px-4 py-2 text-steel-soft transition-colors duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold";
               return (
                 <Reveal key={h.label} delay={0.1 + i * 0.08}>
                   {h.href ? (
-                    <a href={h.href} target="_blank" rel="noopener noreferrer" className={chipClass}>
+                    <button
+                      onClick={() => setLightboxSrc(h.href!)}
+                      className={chipClass + " cursor-zoom-in"}
+                    >
                       <HighlightIcon name={h.icon} />
                       <span className="text-sm font-medium text-ink/85">{h.label}</span>
-                    </a>
+                    </button>
                   ) : (
                     <span className={chipClass}>
                       <HighlightIcon name={h.icon} />
