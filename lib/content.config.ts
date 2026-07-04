@@ -25,9 +25,9 @@ export const site = {
 
 export const whatsapp = {
   // ⚠ PENDIENTE · número real en formato internacional sin "+" ni espacios (ej: 59899123456)
-  number: "598XXXXXXXX",
+  number: "59892328738",
   defaultMessage:
-    "Hola Bruno, vi tu anuncio y quiero consultar sobre el servicio de video",
+    "Hola Bruno Michelena, vi tu sitio web y estaba interesado en tus servicios de video o fotografía profesional",
 } as const;
 
 /** Construye el link de WhatsApp con un mensaje opcional pre-cargado. */
