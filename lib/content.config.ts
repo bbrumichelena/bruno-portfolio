@@ -340,8 +340,7 @@ export const cierre = {
 export const footer = {
   name: site.name,
   tagline: "Video & Foto · Montevideo, Uruguay",
-  // ⚠ PENDIENTE · crear la cuenta de Instagram nueva (separada de RIVARO)
-  instagram: { ready: false, handle: "", url: "" },
-  location: site.location,
+  instagram: { ready: true, handle: "brunomichelena_", url: "https://instagram.com/brunomichelena_" },
+  location: "Montevideo · Canelones · Donde lo necesites",
   year: 2026,
 } as const;
