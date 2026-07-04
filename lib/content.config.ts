@@ -181,7 +181,7 @@ export const portfolio = {
     {
       id: "mas",
       label: "Muchos más",
-      blurb: "Si tu rubro no está acá, hablemos igual.",
+      blurb: "Que tu rubro sea el siguiente...",
       media: { ready: false, type: "video", src: "", poster: "", alt: "Otros rubros" },
     },
   ] as Rubro[],
@@ -266,7 +266,7 @@ export const comoTrabajo = {
   outro:
     "Vos no te ocupás de nada de la parte técnica. *Yo llevo el equipo, lo armo, grabo y te entrego el resultado.*",
   // ⚠ PENDIENTE · clips del detrás de cámara — Bruno grabando, el equipo, la edición
-  media: { ready: false, type: "video" as const, src: "", poster: "", alt: "Detrás de cámara de Bruno trabajando" },
+  media: { ready: true, type: "video" as const, src: "/equipo-trabajando.mp4", poster: "", alt: "Equipo trabajando" },
 } as const;
 
 /* ───────────────────────────── Propuesta ─────────────────────────── */
@@ -295,11 +295,11 @@ export const sobreBruno = {
   ],
   highlights: [
     { icon: "grad", label: "+3 años de formación en la EUF", href: "/diploma-euf.jpg" },
-    { icon: "handshake", label: "Trato cercano y personalizado", href: "/foto-cliente.jpg" },
-    { icon: "film", label: "Calidad cinematográfica en cada entrega", href: "/foto-camara.jpg" },
+    { icon: "handshake", label: "Trato cercano y personalizado" },
+    { icon: "film", label: "Calidad cinematográfica en cada entrega" },
   ],
   // ⚠ PENDIENTE · foto de Bruno con el equipo o grabando
-  photo: { ready: false, src: "", alt: "Bruno Michelena grabando con su equipo" },
+  photo: { ready: true, src: "/foto-bruno.jpg", alt: "Bruno Michelena" },
 } as const;
 
 /* ──────────────────────────── Credenciales ───────────────────────── */

@@ -61,19 +61,24 @@ export function SobreBruno() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            {sobreBruno.highlights.map((h, i) => (
-              <Reveal key={h.label} delay={0.1 + i * 0.08}>
-                <a
-                  href={h.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 rounded-full border border-line/70 bg-secondary/50 px-4 py-2 text-steel-soft transition-colors duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold"
-                >
-                  <HighlightIcon name={h.icon} />
-                  <span className="text-sm font-medium text-ink/85">{h.label}</span>
-                </a>
-              </Reveal>
-            ))}
+            {sobreBruno.highlights.map((h, i) => {
+              const chipClass = "flex items-center gap-2.5 rounded-full border border-line/70 bg-secondary/50 px-4 py-2 text-steel-soft transition-colors duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold";
+              return (
+                <Reveal key={h.label} delay={0.1 + i * 0.08}>
+                  {h.href ? (
+                    <a href={h.href} target="_blank" rel="noopener noreferrer" className={chipClass}>
+                      <HighlightIcon name={h.icon} />
+                      <span className="text-sm font-medium text-ink/85">{h.label}</span>
+                    </a>
+                  ) : (
+                    <span className={chipClass}>
+                      <HighlightIcon name={h.icon} />
+                      <span className="text-sm font-medium text-ink/85">{h.label}</span>
+                    </span>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </div>
