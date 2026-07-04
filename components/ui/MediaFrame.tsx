@@ -26,6 +26,7 @@ export function MediaFrame({
   className,
   parallax = false,
   priority = false,
+  objectPosition = "center",
 }: {
   media: Media;
   ratio?: string;
@@ -33,6 +34,7 @@ export function MediaFrame({
   className?: string;
   parallax?: boolean;
   priority?: boolean;
+  objectPosition?: string;
 }) {
   const pRef = useParallax<HTMLDivElement>(parallax ? 36 : 0);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -93,6 +95,7 @@ export function MediaFrame({
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
+            style={{ objectPosition }}
             priority={priority}
           />
         ) : (

@@ -42,6 +42,7 @@ export function SobreBruno() {
               alt: sobreBruno.photo.alt,
             }}
             ratio="4/5"
+            objectPosition="top"
             label="Bruno · detrás de cámara"
           />
         </Reveal>
