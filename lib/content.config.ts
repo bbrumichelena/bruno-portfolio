@@ -200,20 +200,36 @@ export type Testimonial = {
 export const testimonios = {
   eyebrow: "Lo que dicen",
   title: "Quienes ya trabajaron conmigo.",
-  // ⚠ PENDIENTE · Bruno pide estas citas. El bloque escala 1 → N sin rehacer layout.
   items: [
     {
-      ready: false,
-      quote: "Sumá acá la cita corta del cliente sobre el resultado del contenido.",
-      author: "Cliente",
+      ready: true,
+      quote: "La verdad que un tremendo trabajo, desde que nos pusimos en contacto contigo, siempre total disposición de tu parte y también nos fuiste guiando para crecer en el tema del contenido y sobre todo encargarte de hacer contenido de locos para nuestros clientes asociados, que los ha ayudado a vender más, excelente trabajo, todo muy profesional desde el día uno. Así que nada eso, todo el equipo agradecido contigo y demás.",
+      author: "Franco",
+      role: "Agencia de IA",
+    },
+    {
+      ready: true,
+      quote: "Excelente experiencia. Contraté el servicio de video y edición para mi consultorio y el resultado superó mis expectativas. El trabajo fue muy profesional, con una excelente calidad de imagen y una edición cuidada que refleja perfectamente la esencia del espacio y los servicios que ofrecemos. Además, la atención fue amable, puntual y siempre dispuestos a escuchar mis ideas y aportar sugerencias para lograr un mejor resultado. Sin duda, recomiendo este servicio a quienes busquen contenido audiovisual de calidad para potenciar la imagen de su negocio. ¡Volvería a contratarlo!",
+      author: "Victoria",
+      role: "Cosmetóloga",
+    },
+    {
+      ready: true,
+      quote: "Gracias por tu trabajo, logramos comunicar mejor nuestro servicio y llegar más a nuestros clientes con un contenido muy profesional.",
+      author: "Carolina",
+      role: "Veterinaria",
+    },
+    {
+      ready: true,
+      quote: "Actitud muy profesional. Puntual y respetuoso. Siempre con buenos equipos y bien cuidados. Se preocupa por el resultado final en todas las etapas.",
+      author: "Albert",
       role: "Frigorífico",
     },
     {
-      ready: false,
-      quote: "Cita corta sobre el trabajo o el crecimiento de Bruno.",
-      author: "Marcia Battaglia",
-      role: "Estudio Battaglia",
-      handle: "@mbtt_foto",
+      ready: true,
+      quote: "Quisiera destacar que el trabajo realizado en la cobertura fotográfica y de video del evento empresarial navideño fue excelente. El equipo demostró un nivel muy profesional en todo momento, mostrando una gran atención y disposición para escuchar nuestras necesidades y expectativas, lo que permitió que se lograra exactamente el material que buscábamos. Además, la entrega se realizó puntualmente en la fecha acordada, cumpliendo con los plazos establecidos. La calidad de las imágenes y videos fue impecable, reflejando perfectamente la esencia y el ambiente del evento.",
+      author: "Ana",
+      role: "Evento empresarial",
     },
   ] as Testimonial[],
 };
