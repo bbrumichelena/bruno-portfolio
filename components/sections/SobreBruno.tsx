@@ -114,6 +114,9 @@ export function SobreBruno() {
                     >
                       <HighlightIcon name={h.icon} />
                       <span className="text-sm font-medium text-ink/85">{h.label}</span>
+                      <span className="text-[10px] font-medium tracking-wide text-gold/70 underline underline-offset-2">
+                        ver diploma
+                      </span>
                     </button>
                   ) : (
                     <span className={chipClass}>
