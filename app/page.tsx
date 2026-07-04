@@ -11,7 +11,6 @@ import { Diferencias } from "@/components/sections/Diferencias";
 import { ComoTrabajo } from "@/components/sections/ComoTrabajo";
 import { Propuesta } from "@/components/sections/Propuesta";
 import { SobreBruno } from "@/components/sections/SobreBruno";
-import { Credenciales } from "@/components/sections/Credenciales";
 import { CierreCTA } from "@/components/sections/CierreCTA";
 
 export default function Home() {
@@ -28,8 +27,7 @@ export default function Home() {
         <ComoTrabajo />
         <Propuesta />
         <SobreBruno />
-        <Credenciales />
-        <CierreCTA />
+<CierreCTA />
       </main>
       <Footer />
       <StickyWhatsApp />
