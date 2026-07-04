@@ -50,7 +50,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 text-sm text-muted transition-colors hover:text-ink"
             >
-              <WhatsAppGlyph /> WhatsApp
+              <WhatsAppGlyph /> +598 92 328 738
             </a>
             {footer.instagram.ready ? (
               <a
