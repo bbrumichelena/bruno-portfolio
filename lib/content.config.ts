@@ -294,9 +294,9 @@ export const sobreBruno = {
     "Soy perfeccionista con lo que hago, me adapto a cualquier rubro, trabajo cerca y personalizado con cada cliente, y no entrego nada que no me convenza a mí primero.",
   ],
   highlights: [
-    { icon: "grad", label: "+3 años de formación en la EUF", href: "/diploma-euf.jpg" },
-    { icon: "handshake", label: "Trato cercano y personalizado" },
-    { icon: "film", label: "Calidad cinematográfica en cada entrega" },
+    { icon: "grad", label: "+3 años de formación en la EUF", href: "/diploma-euf.jpg" as string | undefined },
+    { icon: "handshake", label: "Trato cercano y personalizado", href: undefined as string | undefined },
+    { icon: "film", label: "Calidad cinematográfica en cada entrega", href: undefined as string | undefined },
   ],
   // ⚠ PENDIENTE · foto de Bruno con el equipo o grabando
   photo: { ready: true, src: "/foto-bruno.jpg", alt: "Bruno Michelena" },
