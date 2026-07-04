@@ -21,8 +21,26 @@ export function Portfolio() {
         className="max-w-none"
       />
 
-      {/* Tabs / filtros por rubro */}
-      <div className="mt-10 flex flex-wrap gap-2.5 md:mt-12">
+      {/* Mobile: dropdown */}
+      <div className="mt-8 md:hidden">
+        <div className="relative">
+          <select
+            value={active}
+            onChange={(e) => setActive(Number(e.target.value))}
+            className="w-full appearance-none rounded-xl border border-line/70 bg-secondary/60 px-4 py-3 pr-10 text-sm font-medium text-ink backdrop-blur focus:border-gold/50 focus:outline-none"
+          >
+            {portfolio.rubros.map((r, i) => (
+              <option key={r.id} value={i}>{r.label}</option>
+            ))}
+          </select>
+          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gold">
+            ↓
+          </span>
+        </div>
+      </div>
+
+      {/* Desktop: chips */}
+      <div className="mt-10 hidden flex-wrap gap-2.5 md:mt-12 md:flex">
         {portfolio.rubros.map((r, i) => (
           <button
             key={r.id}
