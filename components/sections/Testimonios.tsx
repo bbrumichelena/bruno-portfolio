@@ -77,14 +77,14 @@ export function Testimonios() {
           <figure
             key={i}
             data-index={i}
-            className="flex h-64 w-[85vw] max-w-sm flex-none flex-col snap-center rounded-2xl border border-line/60 bg-primary/50 p-6 md:w-80 transition-all duration-500"
+            className="flex w-[85vw] max-w-sm flex-none flex-col snap-center rounded-2xl border border-line/60 bg-primary/50 p-6 md:w-80 transition-all duration-500"
             style={{
               opacity: visible.has(i) ? 1 : 0.25,
               scale: visible.has(i) ? "1" : "0.95",
             }}
           >
             <QuoteMark />
-            <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-ink/85 line-clamp-6">
+            <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-ink/85">
               {t.quote}
             </blockquote>
             <figcaption className="mt-5 flex items-center gap-3">
