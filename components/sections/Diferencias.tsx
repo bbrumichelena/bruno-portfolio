@@ -2,7 +2,6 @@
 
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { MediaFrame } from "@/components/ui/MediaFrame";
 
 export function Diferencias() {
   return (
@@ -20,16 +19,15 @@ export function Diferencias() {
       </Reveal>
 
       <Reveal delay={0.15} className="mt-10">
-        <MediaFrame
-          media={{
-            ready: true,
-            type: "video",
-            src: "/diferencias.mp4",
-            alt: "Diferencias cinematográficas",
-          }}
-          ratio="16/9"
-          label="Grabación y edición cinematográfica"
-        />
+        <div className="overflow-hidden rounded-2xl ring-1 ring-white/5" style={{ aspectRatio: "16/9" }}>
+          <iframe
+            src="https://www.youtube.com/embed/tlbEgUIprDo?rel=0&modestbranding=1&color=white"
+            title="Grabación y edición Cinematográfica"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="h-full w-full"
+          />
+        </div>
       </Reveal>
     </Section>
   );
