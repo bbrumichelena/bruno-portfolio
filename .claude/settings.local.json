@@ -16,7 +16,17 @@
       "Bash(npm run *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
       "Bash(cp \"/Users/bruno/Downloads/magnific_cinematic-product-video-dark-seamless-studio-backg_seedance_480p_16-9_24fps_63548.mp4\" \"/Users/bruno/Documents/Portafolio brunoi/public/hero-bg.mp4\" && echo \"OK\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(ls \"/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/\")",
+      "Bash(cp \"/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/Portfolio.GASTRONOMIA.mp4\" \"/Users/bruno/Documents/Portafolio brunoi/public/portfolio-gastronomia.mp4\" && echo \"OK\" && du -sh \"/Users/bruno/Documents/Portafolio brunoi/public/portfolio-gastronomia.mp4\")",
+      "Bash(ffmpeg -version)",
+      "Bash(ffmpeg -i '/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/Portfolio.GASTRONOMIA.mp4' -vcodec libx264 -crf 28 -preset fast -vf scale=1280:-2 -acodec aac -b:a 128k -movflags +faststart '/Users/bruno/Documents/Portafolio brunoi/public/portfolio-gastronomia.mp4' -y)",
+      "Bash(ffmpeg -i '/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/Portfolio.Inmobiliario.mp4' -vcodec libx264 -crf 28 -preset fast -vf scale=1280:-2 -acodec aac -b:a 128k -movflags +faststart '/Users/bruno/Documents/Portafolio brunoi/public/portfolio-inmobiliario.mp4' -y)",
+      "Bash(ffmpeg -i '/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/Portfolio.empresariales.mp4' -vcodec libx264 -crf 28 -preset fast -vf scale=1280:-2 -acodec aac -b:a 128k -movflags +faststart '/Users/bruno/Documents/Portafolio brunoi/public/portfolio-eventos.mp4' -y)",
+      "Bash(ffprobe \"/Users/bruno/Documents/Portafolio brunoi/public/portfolio-alimentacion.mp4\")",
+      "Bash(ffmpeg -i '/Users/bruno/Documents/PORTAFOLIO/VIDEOS WEB/Portfolio.Frigorifico.Carniceria.mp4' -vcodec libx264 -crf 28 -preset fast -vf scale=1280:-2 -acodec aac -b:a 128k -movflags +faststart '/Users/bruno/Documents/Portafolio brunoi/public/portfolio-alimentacion.mp4' -y)"
     ]
   }
 }

@@ -107,6 +107,7 @@ export type Rubro = {
   label: string;
   blurb: string;
   media: RubroMedia;
+  ratio?: string;
   testimonial?: { quote: string; author: string };
 };
 
@@ -120,67 +121,62 @@ export const portfolio = {
       id: "gastronomia",
       label: "Gastronomía",
       blurb: "Producto, proceso y cocina con textura de cine.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para gastronomía" },
+      media: { ready: true, type: "video", src: "/portfolio-gastronomia.mp4", poster: "", alt: "Contenido para gastronomía" },
     },
     {
       id: "cosmetologia",
       label: "Cosmetología",
       blurb: "Detalle, piel y resultado con luz cuidada.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para cosmetología" },
+      media: { ready: true, type: "video", src: "/portfolio-cosmetologia.mp4", poster: "", alt: "Contenido para cosmetología" },
     },
     {
       id: "veterinaria",
       label: "Veterinaria",
       blurb: "Cercanía, confianza y el día a día del local.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para veterinaria" },
+      media: { ready: true, type: "video", src: "/portfolio-veterinaria.mp4", poster: "", alt: "Contenido para veterinaria" },
     },
     {
       id: "moda",
       label: "Moda / Marca personal",
       blurb: "Identidad y ritmo para que la marca se sienta.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para moda y marca personal" },
+      media: { ready: true, type: "video", src: "/portfolio-moda.mp4", poster: "", alt: "Contenido para moda y marca personal" },
     },
     {
       id: "agencia-ia",
       label: "Agencia de IA",
       blurb: "Innovación y tecnología con imagen de futuro.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para agencia de IA" },
+      media: { ready: true, type: "video", src: "/portfolio-agencia-ia.mp4", poster: "", alt: "Contenido para agencia de IA" },
     },
     {
       id: "automotriz",
       label: "Automotriz",
       blurb: "Movimiento, detalle y potencia en cada plano.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para automotriz" },
+      media: { ready: true, type: "video", src: "/portfolio-automotriz.mp4", poster: "", alt: "Contenido para automotriz" },
     },
     {
       id: "deporte",
       label: "Boxeo / Deporte",
       blurb: "Intensidad y acción con ritmo cinematográfico.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para boxeo y deporte" },
+      media: { ready: true, type: "video", src: "/portfolio-deporte.mp4", poster: "", alt: "Contenido para boxeo y deporte" },
+      ratio: "16/9",
     },
     {
       id: "inmobiliario",
       label: "Inmobiliario",
       blurb: "Espacios que se venden antes de la visita.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para inmobiliario" },
+      media: { ready: true, type: "video", src: "/portfolio-inmobiliario.mp4", poster: "", alt: "Contenido para inmobiliario" },
     },
     {
       id: "alimentacion",
       label: "Alimentación / Carnicería",
       blurb: "Frescura, producto y confianza en cada toma.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para alimentación y carnicería" },
+      media: { ready: true, type: "video", src: "/portfolio-alimentacion.mp4", poster: "", alt: "Contenido para alimentación y carnicería" },
     },
     {
       id: "eventos",
       label: "Eventos empresariales",
       blurb: "El momento capturado con presencia profesional.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Contenido para eventos empresariales" },
-    },
-    {
-      id: "documental",
-      label: "Documental / Reportaje",
-      blurb: "Historias reales contadas con mirada de autor.",
-      media: { ready: false, type: "video", src: "", poster: "", alt: "Documental y reportaje" },
+      media: { ready: true, type: "video", src: "/portfolio-eventos.mp4", poster: "", alt: "Contenido para eventos empresariales" },
     },
     {
       id: "mas",

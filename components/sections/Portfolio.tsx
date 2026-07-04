@@ -51,7 +51,7 @@ export function Portfolio() {
             className="grid items-center gap-8 md:grid-cols-[minmax(0,320px)_1fr] md:gap-12"
           >
             <div className="mx-auto w-full max-w-[320px]">
-              <MediaFrame media={rubro.media} ratio="9/16" label={`${rubro.label} · muestra`} />
+              <MediaFrame media={rubro.media} ratio={rubro.ratio ?? "9/16"} label={`${rubro.label} · muestra`} />
             </div>
 
             <div>
