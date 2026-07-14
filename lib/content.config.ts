@@ -77,12 +77,12 @@ export const comoFunciona = {
     {
       n: "01",
       title: "Coordinamos el momento",
-      text: "Elegís el día, hora y lugar que mejor te queden. Yo me adapto a tu agenda.",
+      text: "Elegís el día, hora y lugar que necesites. Yo me adapto a tu agenda.",
     },
     {
       n: "02",
       title: "Grabo donde lo necesites",
-      text: "Productos, procesos, clientes satisfechos, antes y después, reels informativos, de entretenimiento... Grabamos lo que tu negocio necesita mostrar. El contenido sirve tanto para tus redes como para tus anuncios. Me adapto a lo que necesitás.",
+      text: "Productos, procesos, clientes satisfechos, antes y después, reels informativos, de entretenimiento... Grabamos lo que tu negocio necesita mostrar. El contenido sirve tanto para tus redes como para tus anuncios. Me adapto a tus necesidades.",
     },
     {
       n: "03",
