@@ -179,6 +179,12 @@ export const portfolio = {
       media: { ready: true, type: "video", src: "/portfolio-eventos.mp4", poster: "", alt: "Contenido para eventos empresariales" },
     },
     {
+      id: "bandas",
+      label: "Bandas en vivo",
+      blurb: "La energía del escenario, capturada con calidad cinematográfica.",
+      media: { ready: false, type: "video", src: "/portfolio-bandas.mp4", poster: "", alt: "Contenido para bandas en vivo" },
+    },
+    {
       id: "mas",
       label: "Muchos más",
       blurb: "Que tu rubro sea el siguiente...",
