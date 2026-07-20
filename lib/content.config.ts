@@ -209,6 +209,12 @@ export const testimonios = {
   items: [
     {
       ready: true,
+      quote: "Recomiendo mucho a Bruno. Tuve la oportunidad de acompañarlo durante su formación y verlo crecer proyecto a proyecto. Es una persona muy comprometida, con buena base técnica, criterio, muchas ganas de aprender y una actitud muy positiva para trabajar en equipo. Siempre busca involucrarse, escuchar devoluciones y seguir mejorando, algo que para mí es una de las cualidades más importantes en esta profesión. Estoy convencida de que va a aportar mucho a cualquier proyecto del que forme parte.",
+      author: "Marcia Battaglia",
+      role: "Profesora y Directora · EUF",
+    },
+    {
+      ready: true,
       quote: "La verdad que un tremendo trabajo, desde que nos pusimos en contacto contigo, siempre total disposición de tu parte y también nos fuiste guiando para crecer en el tema del contenido y sobre todo encargarte de hacer contenido de locos para nuestros clientes asociados, que los ha ayudado a vender más, excelente trabajo, todo muy profesional desde el día uno. Así que nada eso, todo el equipo agradecido contigo y demás.",
       author: "Franco",
       role: "Agencia de IA",
