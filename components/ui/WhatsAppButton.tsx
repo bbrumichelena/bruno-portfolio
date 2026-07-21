@@ -1,5 +1,17 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { waLink } from "@/lib/content.config";
+
+declare global {
+  interface Window { fbq?: (...args: unknown[]) => void; }
+}
+
+function trackContact() {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "Contact");
+  }
+}
 
 function WhatsAppGlyph({ className }: { className?: string }) {
   return (
@@ -18,10 +30,6 @@ type Props = {
   className?: string;
 };
 
-/**
- * CTA a WhatsApp — la acción principal del sitio.
- * Server-safe: shimmer y hover en CSS puro. Usable en cualquier sección.
- */
 export function WhatsAppButton({
   message,
   children = "Escribime por WhatsApp",
@@ -48,6 +56,7 @@ export function WhatsAppButton({
       href={waLink(message)}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackContact}
       className={cn(
         "group relative inline-flex items-center justify-center overflow-hidden rounded-full font-semibold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
         sizes[size],
