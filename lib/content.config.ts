@@ -76,8 +76,8 @@ export const comoFunciona = {
   steps: [
     {
       n: "01",
-      title: "Coordinamos el momento",
-      text: "Elegís el día, hora y lugar que necesites. Yo me adapto a tu agenda.",
+      title: "Coordinamos qué y cuándo grabar",
+      text: "Definimos juntos el contenido del mes: qué mostrar y qué tipo de Reels hacer para tu negocio. Después coordinamos el día, hora y lugar.",
     },
     {
       n: "02",
@@ -87,7 +87,7 @@ export const comoFunciona = {
     {
       n: "03",
       title: "Te entrego el contenido",
-      text: "Editado y listo para publicar lo antes posible, para que lo uses rápido. ¿Preferís editarlo vos? También entrego los videos con corrección de color y recorte básico para que los trabajes como vos quieras.",
+      text: "Editado y listo para publicar lo antes posible, para que lo uses rápido.",
     },
   ],
 } as const;
