@@ -113,7 +113,7 @@ export type Rubro = {
 
 export const portfolio = {
   eyebrow: "Trabajos",
-  title: "Trabajo con distintos tipos de negocios.",
+  title: "Ya lo hice para negocios como el tuyo.",
   intro:
     "Grabé y fotografié contenido para rubros como gastronomía, belleza, veterinaria, automotriz, moda y muchos más. Si tu rubro no está en mi lista, podemos hablar y con gusto me adapto para que logremos el mejor contenido profesional. Cuento con el equipo profesional para lograrlo.",
   rubros: [
