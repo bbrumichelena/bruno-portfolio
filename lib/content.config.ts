@@ -53,11 +53,11 @@ export const nav = {
 /* ────────────────────────────── Hero ────────────────────────────── */
 
 export const hero = {
-  eyebrow: "Video & Foto",
+  eyebrow: "Para negocios sin tiempo",
   // El acento itálico serif se aplica a las palabras entre *asteriscos*
-  headline: "Contenido de video para tu negocio, *listo para publicar.*",
+  headline: "Contenido cinematográfico para todo el mes, en 1 sola sesión, *listo para publicar*",
   subheadline:
-    "Te grabo y edito el contenido del mes para tu negocio de manera *PROFESIONAL*. Vos seguís con tu negocio, yo me encargo del contenido.",
+    "Te grabo, edito y asesoro el contenido de todo el *MES*. Vos seguís con tu negocio, yo me encargo del contenido.",
   cta: { label: "Escribime por WhatsApp", message: whatsapp.defaultMessage },
   // ⚠ PENDIENTE · video corto en loop (5–10s) con montaje de distintos trabajos
   video: {
