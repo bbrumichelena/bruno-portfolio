@@ -285,8 +285,8 @@ export const comoTrabajo = {
 
 export const propuesta = {
   eyebrow: "La propuesta",
-  title: "Una sesión mensual, simple.",
-  text: "Sesión de 3 a 4 horas, una vez al mes. Te entrego los videos editados, listos para publicar en tus redes.",
+  title: "Todo el contenido del mes, en 1 sola sesión.",
+  text: "Reels cinematográficos para todo el contenido del mes, en 1 sola sesión de 4 horas, sin perder tiempo de tu negocio. Te entrego los videos editados, listos para publicar en tus redes.",
   note: "El precio se conversa directo por WhatsApp, según tu negocio.",
   cta: {
     label: "Quiero coordinar una sesión",
