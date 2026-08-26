@@ -20,14 +20,14 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Propuesta />
         <ComoFunciona />
         <Portfolio />
         <Testimonios />
         <Diferencias />
         <ComoTrabajo />
-        <Propuesta />
         <SobreBruno />
-<CierreCTA />
+        <CierreCTA />
       </main>
       <Footer />
       <StickyWhatsApp />
