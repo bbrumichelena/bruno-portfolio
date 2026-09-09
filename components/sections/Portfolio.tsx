@@ -44,13 +44,15 @@ function PlaylistPlayer({ videos, ratio = "9/16" }: { videos: NonNullable<(typeo
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+      <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-2">
         {videos.map((_, i) => (
           <button
             key={i}
             onClick={() => setIdx(i)}
-            className={cn("h-1.5 rounded-full transition-all", i === idx ? "w-4 bg-gold" : "w-1.5 bg-white/40")}
-          />
+            className="flex h-6 w-6 items-center justify-center"
+          >
+            <span className={cn("block rounded-full transition-all", i === idx ? "h-2 w-5 bg-gold" : "h-2 w-2 bg-white/50")} />
+          </button>
         ))}
       </div>
     </div>
