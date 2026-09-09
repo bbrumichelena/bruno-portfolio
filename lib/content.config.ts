@@ -107,6 +107,7 @@ export type Rubro = {
   label: string;
   blurb: string;
   media: RubroMedia;
+  videos?: RubroMedia[]; // playlist: reproduce cada video 20s en secuencia
   ratio?: string;
   testimonial?: { quote: string; author: string };
 };
@@ -183,6 +184,20 @@ export const portfolio = {
       label: "Bandas en vivo",
       blurb: "La energía del escenario, capturada con calidad cinematográfica.",
       media: { ready: false, type: "video", src: "/portfolio-bandas.mp4", poster: "", alt: "Contenido para bandas en vivo" },
+    },
+    {
+      id: "unas",
+      label: "Centro de estética de uñas",
+      blurb: "Detalle, color y arte en cada toma.",
+      media: { ready: true, type: "video", src: "/portfolio-unas-1.mp4", poster: "", alt: "Contenido para centro de estética de uñas" },
+      videos: [
+        { ready: true, type: "video", src: "/portfolio-unas-1.mp4", poster: "", alt: "Uñas 1" },
+        { ready: true, type: "video", src: "/portfolio-unas-2.mp4", poster: "", alt: "Uñas 2" },
+        { ready: true, type: "video", src: "/portfolio-unas-3.mp4", poster: "", alt: "Uñas 3" },
+        { ready: true, type: "video", src: "/portfolio-unas-4.mp4", poster: "", alt: "Uñas 4" },
+        { ready: true, type: "video", src: "/portfolio-unas-5.mp4", poster: "", alt: "Uñas 5" },
+        { ready: true, type: "video", src: "/portfolio-unas-6.mp4", poster: "", alt: "Uñas 6" },
+      ],
     },
     {
       id: "mas",

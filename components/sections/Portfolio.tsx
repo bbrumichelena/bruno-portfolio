@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 declare global { interface Window { fbq?: (...args: unknown[]) => void; } }
 function trackContact() { if (typeof window !== "undefined" && typeof window.fbq === "function") window.fbq("track", "Contact"); }
@@ -10,6 +10,52 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MediaFrame } from "@/components/ui/MediaFrame";
 import { cn } from "@/lib/utils";
+
+function PlaylistPlayer({ videos, ratio = "9/16" }: { videos: NonNullable<(typeof portfolio.rubros)[0]["videos"]>; ratio?: string }) {
+  const [idx, setIdx] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    setIdx(0);
+  }, [videos]);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    el.currentTime = 0;
+    el.play().catch(() => {});
+    const timer = setTimeout(() => {
+      setIdx((i) => (i + 1) % videos.length);
+    }, 20000);
+    return () => clearTimeout(timer);
+  }, [idx, videos.length]);
+
+  const [w, h] = ratio.split("/").map(Number);
+  const paddingTop = `${(h / w) * 100}%`;
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl bg-black" style={{ paddingTop }}>
+      <video
+        ref={videoRef}
+        key={videos[idx].src}
+        src={videos[idx].src}
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+        {videos.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            className={cn("h-1.5 rounded-full transition-all", i === idx ? "w-4 bg-gold" : "w-1.5 bg-white/40")}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function Portfolio() {
   const [active, setActive] = useState(0);
@@ -91,7 +137,11 @@ export function Portfolio() {
             ) : (
               <>
                 <div className="mx-auto w-full max-w-[320px]">
-                  <MediaFrame media={rubro.media} ratio={rubro.ratio ?? "9/16"} label={`${rubro.label} · muestra`} />
+                  {rubro.videos ? (
+                    <PlaylistPlayer videos={rubro.videos} ratio={rubro.ratio ?? "9/16"} />
+                  ) : (
+                    <MediaFrame media={rubro.media} ratio={rubro.ratio ?? "9/16"} label={`${rubro.label} · muestra`} />
+                  )}
                 </div>
 
                 <div>
