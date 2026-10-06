@@ -141,6 +141,7 @@ export function Hero() {
               Ver trabajos
               <span className="transition-transform group-hover:translate-x-1">↓</span>
             </a>
+            <p className="text-base font-bold text-ink/70">(Agenda Limitada)</p>
           </motion.div>
         </div>
       </div>
