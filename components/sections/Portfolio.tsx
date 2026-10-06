@@ -180,8 +180,7 @@ export function Portfolio() {
       </div>
 
       <p className="mt-12 max-w-2xl text-sm leading-relaxed text-muted/80">
-        ¿Tu rubro no está en la lista? También podemos hablar: la cámara se adapta, las ganas de
-        hacer buen contenido son las mismas.
+        ¿Tu rubro no está en la lista? Escribime para que aparezca en la lista.
       </p>
     </Section>
   );
