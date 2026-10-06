@@ -38,10 +38,17 @@ export function Propuesta() {
         </Reveal>
 
         <Reveal delay={0.32}>
-          <div className="mt-9 flex justify-center">
+          <div className="mt-9 flex flex-col items-center gap-4">
             <WhatsAppButton message={propuesta.cta.message} size="lg">
               {propuesta.cta.label}
             </WhatsAppButton>
+            <p className="text-sm text-muted">
+              Sesiones desde{" "}
+              <span className="font-semibold text-ink/80">$150 USD</span>
+              {" "}·{" "}
+              <span className="font-semibold text-ink/80">hasta $500 USD</span>
+              {" "}según el proyecto
+            </p>
           </div>
         </Reveal>
       </div>
