@@ -142,7 +142,7 @@ export function Portfolio() {
                   {rubro.videos ? (
                     <PlaylistPlayer videos={rubro.videos} ratio={rubro.ratio ?? "9/16"} />
                   ) : (
-                    <MediaFrame media={rubro.media} ratio={rubro.ratio ?? "9/16"} label={`${rubro.label} · muestra`} />
+                    <MediaFrame media={rubro.media} ratio={rubro.ratio ?? "9/16"} label={`${rubro.label} · muestra`} lazyVideo />
                   )}
                 </div>
 

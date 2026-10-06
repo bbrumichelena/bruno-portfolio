@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Brackets } from "./Brackets";
 import { useParallax } from "@/lib/useParallax";
@@ -27,6 +27,7 @@ export function MediaFrame({
   parallax = false,
   priority = false,
   objectPosition = "center",
+  lazyVideo = false,
 }: {
   media: Media;
   ratio?: string;
@@ -35,10 +36,22 @@ export function MediaFrame({
   parallax?: boolean;
   priority?: boolean;
   objectPosition?: string;
+  lazyVideo?: boolean;
 }) {
   const pRef = useParallax<HTMLDivElement>(parallax ? 36 : 0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(!lazyVideo);
   const [muted, setMuted] = useState(true);
+
+  useEffect(() => {
+    if (!lazyVideo) return;
+    const el = containerRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setInView(true); obs.disconnect(); } }, { rootMargin: "200px" });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [lazyVideo]);
   const [volume, setVolume] = useState(0.8);
   const [showVolume, setShowVolume] = useState(false);
 
@@ -69,6 +82,7 @@ export function MediaFrame({
 
   return (
     <div
+      ref={containerRef}
       className={cn(
         "group relative overflow-hidden rounded-2xl bg-secondary ring-1 ring-white/5",
         className,
@@ -77,6 +91,7 @@ export function MediaFrame({
     >
       <div ref={parallax ? pRef : undefined} className="absolute inset-0 scale-110">
         {media.ready && media.type === "video" ? (
+          inView ? (
           <video
             ref={videoRef}
             className="h-full w-full object-cover"
@@ -88,6 +103,7 @@ export function MediaFrame({
             playsInline
             preload="metadata"
           />
+          ) : <Placeholder label={label} />
         ) : media.ready && media.type === "image" ? (
           <Image
             src={media.src}
