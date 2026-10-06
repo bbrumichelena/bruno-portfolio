@@ -53,7 +53,7 @@ export const nav = {
 /* ────────────────────────────── Hero ────────────────────────────── */
 
 export const hero = {
-  eyebrow: "Para negocios sin tiempo",
+  eyebrow: "Para tu negocio",
   // El acento itálico serif se aplica a las palabras entre *asteriscos*
   headline: "Contenido cinematográfico para todo el mes, en 1 sola sesión, *listo para publicar*",
   subheadline:
