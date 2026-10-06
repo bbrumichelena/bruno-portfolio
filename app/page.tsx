@@ -24,9 +24,9 @@ export default function Home() {
         <ComoFunciona />
         <Portfolio />
         <Testimonios />
+        <SobreBruno />
         <Diferencias />
         <ComoTrabajo />
-        <SobreBruno />
         <CierreCTA />
       </main>
       <Footer />
