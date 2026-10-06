@@ -270,24 +270,16 @@ export const comoTrabajo = {
     "Trabajo con el mismo nivel de equipo que se usa en producciones de cine y publicidad, adaptado para que tu negocio tenga contenido profesional. No un video casero.",
   gear: [
     {
-      title: "Cámara profesional Sony de cine",
-      text: "Cámara Sony Alpha 7V — un equipo profesional para lograr una imagen única, nítida y con esa profundidad que se ve en las producciones más grandes.",
+      title: "Cámara Sony Alpha 7V",
+      text: "La misma cámara que se usa en producciones de cine y publicidad. Imagen nítida, con profundidad y ese look cinematográfico que diferencia tu contenido.",
     },
     {
-      title: "Estabilizador gimbal profesional",
-      text: "Para obtener movimientos de cámara fluidos y cinematográficos que elevan el resultado final.",
+      title: "Audio · Hollyland Lark M2",
+      text: "El audio malo arruina hasta el mejor video. Cada palabra se escucha con claridad profesional.",
     },
     {
-      title: "Audio profesional de alta calidad · Hollyland Lark M2",
-      text: "El audio malo arruina hasta el mejor video. Con micrófonos profesionales, cada palabra y sonido se escucha con una calidad que transmite seriedad y confianza desde el primer segundo.",
-    },
-    {
-      title: "Iluminación profesional",
-      text: "Creamos un entorno de luz pensado para que lo que grabamos se vea exactamente como tiene que verse. Cada detalle iluminado, cada toma bajo control.",
-    },
-    {
-      title: "Edición profesional · Adobe Premiere y Lightroom",
-      text: "Color, ritmo y montaje pensado en su totalidad para que el contenido se vea cuidado, especial y con identidad propia.",
+      title: "Edición · Adobe Premiere y Lightroom",
+      text: "Color, ritmo y montaje cuidados para que el contenido tenga identidad propia y se vea listo para publicar.",
     },
   ],
   outro:
