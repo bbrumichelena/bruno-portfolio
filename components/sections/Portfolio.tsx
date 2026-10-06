@@ -167,7 +167,7 @@ export function Portfolio() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={trackContact}
-                    className="group mt-7 inline-flex items-center gap-2 text-sm font-medium text-gold transition-colors hover:text-gold-soft"
+                    className="group mt-7 inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2.5 text-sm font-semibold uppercase tracking-wide text-gold shadow-[0_0_8px_rgba(255,255,255,0.08)] transition-all hover:border-white/40 hover:shadow-[0_0_14px_rgba(255,255,255,0.15)]"
                   >
                     Quiero algo así para mi negocio
                     <span className="transition-transform group-hover:translate-x-1">→</span>
