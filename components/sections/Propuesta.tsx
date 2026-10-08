@@ -43,7 +43,7 @@ export function Propuesta() {
               {propuesta.cta.label}
             </WhatsAppButton>
             <p className="text-sm text-muted">
-              Sesiones desde{" "}
+              Todos los videos del mes desde{" "}
               <span className="font-semibold text-ink/80">$150 USD</span>
               {" "}·{" "}
               <span className="font-semibold text-ink/80">hasta $500 USD</span>
