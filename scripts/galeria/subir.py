@@ -131,7 +131,9 @@ def sips_size(path):
 def leer_manifest(public_url, prefix):
     url = f"{public_url.rstrip('/')}/{prefix}/manifest.json"
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={"Cache-Control": "no-cache"}), timeout=30) as r:
+        # Cloudflare rechaza (403) el User-Agent por defecto de Python
+        headers = {"Cache-Control": "no-cache", "User-Agent": "Mozilla/5.0 (galeria-subir)"}
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         if e.code == 404:
