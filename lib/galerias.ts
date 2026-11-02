@@ -7,7 +7,7 @@ import { createHash } from "node:crypto";
  * Lo público (títulos, días) vive acá. Lo privado vive en variables de entorno de Vercel:
  *   GALERIAS_BASE_URL          URL pública del bucket de R2 (ej. https://pub-xxxx.r2.dev)
  *   GALERIA_<ID>_PREFIX        carpeta secreta de la galería dentro del bucket
- *   GALERIA_<ID>_PASSWORD      contraseña que se le pasa al cliente
+ *   GALERIA_<ID>_PASSWORD      (opcional) contraseña para el cliente; sin ella la galería se abre con el link
  * donde <ID> es el slug en mayúsculas con guiones bajos (polo-uruguay → POLO_URUGUAY).
  *
  * Las fotos y el manifest.json los sube scripts/galeria/subir.py; agregar fotos no requiere publicar el sitio.
