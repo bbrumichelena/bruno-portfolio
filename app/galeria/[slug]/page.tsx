@@ -30,10 +30,9 @@ export default async function GaleriaPage({ params }: Props) {
   const galeria = getGaleria(slug);
   if (!galeria) notFound();
 
-  // Sin GALERIA_<ID>_PASSWORD la galería se abre directo con el link.
   const password = galeriaPassword(slug);
   const store = await cookies();
-  const autorizado = !password || store.get(cookieName(slug))?.value === tokenAcceso(slug, password);
+  const autorizado = !!password && store.get(cookieName(slug))?.value === tokenAcceso(slug, password);
 
   if (!autorizado) {
     return <GaleriaLogin slug={slug} titulo={galeria.titulo} bajada={galeria.bajada} cliente={galeria.cliente} fechas={galeria.fechas} />;
