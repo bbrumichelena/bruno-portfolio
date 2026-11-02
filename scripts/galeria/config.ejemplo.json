@@ -1,0 +1,11 @@
+{
+  "account_id": "TU_ACCOUNT_ID_DE_CLOUDFLARE",
+  "access_key_id": "ACCESS_KEY_ID_DEL_TOKEN_R2",
+  "secret_access_key": "SECRET_ACCESS_KEY_DEL_TOKEN_R2",
+  "bucket": "bruno-galerias",
+  "public_url": "https://pub-XXXXXXXX.r2.dev",
+  "sitio": "https://bruno-herrera.vercel.app",
+  "galerias": {
+    "polo-uruguay": { "prefix": "polo-uruguay-CAMBIAR-POR-ALGO-SECRETO" }
+  }
+}
